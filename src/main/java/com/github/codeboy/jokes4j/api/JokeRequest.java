@@ -141,7 +141,7 @@ public class JokeRequest {
          * @param categories The categories of the joke. Null will be considered as any.
          * @return This builder instance for chaining.
          */
-        public Builder categories(Category[] categories) {
+        public Builder categories(Category... categories) {
             this.categories = categories;
             return this;
         }
@@ -161,7 +161,7 @@ public class JokeRequest {
          * @param blackList An Array of flags to be blacklisted. Null will be considered as no blacklist.
          * @return This builder instance for chaining.
          */
-        public Builder blackList(Flag[] blackList) {
+        public Builder blackList(Flag... blackList) {
             this.blackList = blackList;
             return this;
         }

@@ -7,6 +7,10 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
 public class Util {
+    /**
+     * sends a get request to the specified url
+     * @return the response of the server
+     */
     public static String get(URL url) throws IOException {
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestMethod("GET");
@@ -22,6 +26,9 @@ public class Util {
         }
     }
 
+    /**
+     * urlencodes a value
+     */
     public static String encode(String value) {
         try {
             return URLEncoder.encode(value, StandardCharsets.UTF_8.toString());

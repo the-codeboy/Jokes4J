@@ -27,38 +27,65 @@ public class Joke {
                 '}';
     }
 
+    /**
+     * @return the category of this joke
+     */
     public Category getCategory() {
         return category;
     }
 
+    /**
+     * @return the type of joke - either single or twopart
+     */
     public JokeType getType() {
         return type;
     }
 
+    /**
+     * @return the setup or null if {@link Joke#getType()} returns {@link JokeType#single}
+     */
     public String getSetup() {
         return setup;
     }
 
+    /**
+     * @return the delivery or null if {@link Joke#getType()} returns {@link JokeType#single}
+     */
     public String getDelivery() {
         return delivery;
     }
 
+    /**
+     * @return the joke or null if {@link Joke#getType()} returns {@link JokeType#twopart}
+     */
     public String getJoke() {
         return joke;
     }
 
+    /**
+     * @return a map of the flags
+     */
     public Map<Flag, Boolean> getFlags() {
         return flags;
     }
 
+    /**
+     * @return the id of the joke
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * @return if this joke is safe
+     */
     public boolean isSafe() {
         return safe;
     }
 
+    /**
+     * @return the language this joke is in
+     */
     public Language getLanguage() {
         return language;
     }

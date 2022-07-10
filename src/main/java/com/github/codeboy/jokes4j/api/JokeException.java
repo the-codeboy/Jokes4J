@@ -4,6 +4,9 @@ public class JokeException extends RuntimeException {
     public JokeException() {
     }
 
+    /**
+     * constructs a JokeException with the given message
+     */
     public JokeException(String message) {
         super(message);
     }

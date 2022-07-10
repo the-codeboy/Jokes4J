@@ -13,6 +13,9 @@ public class ApiResponse {
     private int amount = 1;
     private String errorMessage;
 
+    /**
+     * creates an ApiResponse object from the specified JsonObject
+     */
     public ApiResponse(JsonObject object) {
         error = object.get("error").getAsBoolean();
         if (error)
@@ -34,22 +37,37 @@ public class ApiResponse {
         return joke;
     }
 
+    /**
+     * @return if the api returned an error
+     */
     public boolean isError() {
         return error;
     }
 
+    /**
+     * @return the amount of jokes returned by the api
+     */
     public int getAmount() {
         return amount;
     }
 
+    /**
+     * @return the jokes returned by the api
+     */
     public Joke[] getJokes() {
         return jokes;
     }
 
+    /**
+     * @return the first returned joke or null
+     */
     public Joke getJoke() {
         return jokes.length == 0 ? null : jokes[0];
     }
 
+    /**
+     * @return the error-message returned by the api
+     */
     public String getErrorMessage() {
         return errorMessage;
     }

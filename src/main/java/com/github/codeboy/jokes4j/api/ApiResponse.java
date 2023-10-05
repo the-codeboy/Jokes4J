@@ -15,6 +15,7 @@ public class ApiResponse {
 
     /**
      * creates an ApiResponse object from the specified JsonObject
+     * @param object JsonObject to analyze
      */
     public ApiResponse(JsonObject object) {
         error = object.get("error").getAsBoolean();

@@ -9,7 +9,9 @@ import java.nio.charset.StandardCharsets;
 public class Util {
     /**
      * sends a get request to the specified url
+     * @param url the remote url to contact
      * @return the response of the server
+     * @throws java.io.IOException Exception on remote HTTP/GET
      */
     public static String get(URL url) throws IOException {
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -28,6 +30,8 @@ public class Util {
 
     /**
      * urlencodes a value
+     * @param value value to encode
+     * @return the encoded string
      */
     public static String encode(String value) {
         try {

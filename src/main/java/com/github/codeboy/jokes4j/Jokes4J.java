@@ -55,6 +55,7 @@ public class Jokes4J {
     }
 
     /**
+     * @param request the Joke request
      * @return a joke that fits the specified request
      */
     public Joke getJoke(JokeRequest request) {
@@ -72,7 +73,9 @@ public class Jokes4J {
     }
 
     /**
+     * @param request the joke request
      * @return an api response object for the specified joke request
+     * @throws java.io.IOException Exception on remote HTTP/GET
      */
     public ApiResponse getJokes(JokeRequest request) throws IOException {
         URL url = request.getURl();
